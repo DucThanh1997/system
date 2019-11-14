@@ -31,33 +31,23 @@ Mô tả cách thức truyền tin qua môi trường truyền dẫn. Có 2 lo�
 # Sơ đô vật lý
 Sơ đồ vật lý định nghĩa cách thức các máy tính liên kết với nhau bằng các thiết bị vật lý môi trường truyền dẫn hiện thực. Có nhiều loại cấu hình vật lý được sử dụng như
 
-- Bus:
-
-dữ liệu truyền đi qua từng máy nếu chùng địa chỉ thì chạy vào cái đầu cuối hứng và xóa thông tin tự do
+- Bus: dữ liệu truyền đi qua từng máy nếu chùng địa chỉ thì chạy vào cái đầu cuối hứng và xóa thông tin tự do
 
 ![image](https://user-images.githubusercontent.com/45547213/68085285-f6fc4c00-fe71-11e9-8f84-f78305e96b18.png)
 
-- Ring
-
-mỗi máy là 1 trạm chuyển thông tin, thông tin sẽ đi qua từng máy 1 và được khuếch đại lên
+- Ring: mỗi máy là 1 trạm chuyển thông tin, thông tin sẽ đi qua từng máy 1 và được khuếch đại lên
 
 ![image](https://user-images.githubusercontent.com/45547213/68085394-23649800-fe73-11e9-8de8-bc4cbccbb36b.png)
 
-- Star
-
-Gửi hết qua thiết bị trung tâm là hub, hub sẽ phân giải xem cái nào đi tiếp đến cái nào
+- Star: Gửi hết qua thiết bị trung tâm là hub, hub sẽ phân giải xem cái nào đi tiếp đến cái nào
 
 ![image](https://user-images.githubusercontent.com/45547213/68085409-5d359e80-fe73-11e9-9ad0-cb6271500037.png)
 
-- Mesh
-
-có nhiều đường để từ máy này đến máy khác nhưng như này hay bị thừa
+- Mesh: có nhiều đường để từ máy này đến máy khác nhưng như này hay bị thừa
 
 ![image](https://user-images.githubusercontent.com/45547213/68085413-6cb4e780-fe73-11e9-99e6-7318c670ac5b.png)
 
-- Hồn hợp
-
-Sự kết hợp của bus ring và star, là chuẩn của nhiều mạng lan
+- Hồn hợp: Sự kết hợp của bus ring và star, là chuẩn của nhiều mạng lan
 
 ![image](https://user-images.githubusercontent.com/45547213/68085419-87875c00-fe73-11e9-9d33-5762520a8de4.png)
 
