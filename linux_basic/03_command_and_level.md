@@ -55,3 +55,27 @@ Tuy nhiên với ubuntu 16.04 trở đi họ dùng systemd. Systemd không có k
     + Shell(parent process) sẽ gọi fork để tạo bản sao của chính nó (child process). Tiến trình con có pID riêng. Chạy một chương trình trong một tiến trình riêng biệt đảm bảo sẽ bảo vệ quy trình cha nếu chương trình gây ra lỗi khi thực hiện.
     + Tiến trình con sau đó được gọi là exec() để chạy câu lệnh của người dùng. exec() sẽ thay thế tiến trình con bằng chương trình mà người dùng yêu cầu.
     + Tiến trình cha sẽ đợi tiến trình con hoàn thành quá trình thực thi của nó qua hàm wait().
+
+
+## Các loại command trong linux
+Có hàng ngìn các câu lênh trong linux. Tất cả chúng đều được chia thành 4 loại. Mỗi loại có đặc điểm và mức độ ưu tiên riêng trong mỗi trường linux
+
+Vậy làm thế nào để phân biệt các loại command bằng `type`
+
+![image](https://user-images.githubusercontent.com/45547213/68910829-bd86e300-0785-11ea-82ab-72f84cb2816b.png)
+
+Và có những loại command nào
+
+- Built-in Shell Commands: những loại lệnh này được xử lí ngay trong shell. Điều này khiến chúng trở nên tất nhanh vì lệnh này không sử dụng 1 phần mềm nào để chạy. Những lệnh builtin này thường đơn giản và làm những công việc bình thường chẳng hạn liệt kê file. 1 vài câu lệnh điển hình `cd, bg, jobs, kill, local, logout, echo`
+
+- Shell function: thường là các câu lệnh script được liên kết với linux. Shell function thường là các methods hoặc function trong các ngôn ngữ khác. Ví dụ ` while, else, do, case` thường được dùn trong shell script
+
+- Alias: Kiểu lối tắt. Bạn tạo ra để gõ cho nhanh
+
+- Excutable Programs: Là các lệnh có nguồn gốc từ các chương trình bên ngoài. Chẳng hạn `zip, wget, vlc, mplayer`. Miễn là bạn tải nó và nó ở trong $PATH thì bạn có thể dùng được
+
+## Đường dẫn tương đối và đường dẫn tuyệt đối
+- Đường dẫn tuyệt đối là đường dẫn của 1 tệp tin bắt đầu từ thư mục gốc(root) Ví dụ: `/usr/local`
+
+- Đường dẫn tương đối là đường dẫn đến 1 tệp tin hoặc thư mục mà ko cần phải qua thư mục gốc. Ví dụ: `cd ../cat`
+
